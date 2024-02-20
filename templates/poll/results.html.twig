@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<section>
+
+  {% if app.request.hasPreviousSession %}
+    {% for type, messages in app.session.flashbag.all() %}
+      {% for message in messages %}
+        <div class="flash-{{ type }}">
+          {{ message }}
+        </div>
+      {% endfor %}
+    {% endfor %}
+  {% endif %}
+
+  <h2>Résultats:&nbsp;{{ poll.name }}</h2>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 offset-md-2 offset-sm-0 offset-xs-0">
+
+          <div class="results">
+
+            {% for opinion in poll.opinions %}
+              <div class="graph_bar">
+                <div class="fill fill_color_{{ loop.index }}" style="width: {{ opinion.votesPercentage }}%">
+                  {{ opinion.votesPercentage }}%
+                </div>
+              </div>
+              <div class="form-control-opinions">{{ opinion }}</div>
+            {% endfor %}
+
+            <h3>
+              Total des votes:
+              {% set total = poll.totalVotes  %}
+              {% transchoice total %}
+                {0} 0 vote|{1} 1 vote|]1,Inf] %total% votes
+              {% endtranschoice %}
+            </h3>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+</section>
+
+{% endblock %}

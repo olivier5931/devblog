@@ -1,0 +1,75 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+  <section>
+
+    {% if app.request.hasPreviousSession %}
+      {% for type, messages in app.session.flashbag.all() %}
+        {% for message in messages %}
+          <div class="flash-{{ type }}">{{ message }}</div>
+        {% endfor %}
+      {% endfor %}
+    {% endif %}
+
+    <h2>{{ article.titleeng }}</h2>
+
+    <div class="article">
+
+      <div class="show-body">
+        <img src="/images/articles/{{ article.image }}" id="img_show" alt="image"/>
+        <p class="show-content">{{ article.contenteng|raw }}</p>
+        <p class="show-full-content">{{ article.fullcontenteng|raw }}</p>
+      </div>
+
+      <div class="show-date">
+        <p>
+          <span title="show">posted on&nbsp;{{ article.createdAt|date("d/m/Y at H:i") }} - category {{ article.category }}</span>
+        </p>
+
+        {% if is_granted('ROLE_SUPER_ADMIN') %}
+          <h3 class="edit">
+            <a href="{{ path('article_edit', {'id':article.id}) }}">edit the article</a>
+          </h3>
+        {% endif %}
+      </div>
+
+      <h3 class="comments-number">{{ article.comments | length }} comment(s)</h3>
+
+      <div class="comment">
+
+        {% for comment in article.comments %}
+          {% if comment.language == 'eng' %}
+
+            <div class="row" id="comment">
+              <div class="comment-body col-md-10 offset-md-1 offset-sm-0 offset-xs-0">
+                <span title="show">
+                  <i class="fa fa-user"></i>&nbsp;{{ comment.username }}&nbsp;&nbsp;&nbsp;
+                  <i class="fa fa-clock-o"></i>&nbsp;{{ comment.createdAt |date ("d/m/Y à H:i") }}
+                </span>
+                <p class="comment-post">{{ comment.content|raw }}</p>
+              </div>
+            </div>
+
+          {% endif %}
+        {% endfor %}
+
+        {% if app.user.status == 'enabled' %}
+
+          {{ form_start(formComment) }}
+
+          {{ form_widget(formComment.content, {'attr': {'placeholder': 'let a comment..'}}) }}
+
+            <button type="submit" class="btn btn-primary_show"><i class="fa fa-reply"></i> send</button>
+
+          {{ form_end(formComment) }}
+
+        {% endif %}
+
+      </div>
+
+    </div>
+
+  </section>
+
+{% endblock %}

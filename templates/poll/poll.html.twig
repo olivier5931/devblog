@@ -1,0 +1,77 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<section>
+
+  {% if app.request.hasPreviousSession %}
+    {% for type, messages in app.session.flashbag.all() %}
+      {% for message in messages %}
+        <div class="flash-{{ type }}">
+          {{ message }}
+        </div>
+      {% endfor %}
+    {% endfor %}
+  {% endif %}
+
+  <h2 class="list_polls">Liste des sondages</h2>
+
+    <div class="container" style="padding: 0">
+
+      <table scope="col-md-12" class="polls_table">
+        <thead>
+          <tr>
+            <th scope="col">Nom</th>
+            <th scope="col">Catégories</th>
+            <th scope="col">Nb. votes</th>
+            <th scope="col">Etat</th>
+            <th scope="col">Résultats</th>
+            <th scope="col">Date</th>
+            <th scope="col">&nbsp;&nbsp;Vote&nbsp;&nbsp;</th>
+          </tr>
+        </thead>
+
+        <tbody>
+        {% for poll in pagination %}
+          <tr>
+            {% if user.roles == ['ROLE_SUPER_ADMIN'] %}
+              <th id="edit">
+                <i class="fa fa-pencil"></i>&nbsp;&nbsp;<a href="{{ path('poll_edit', { id: poll.id }) }}" style="color:#0056b3">{{ poll }}</a>
+              </th>
+            {% else %}
+              <th>{{ poll }}</th>
+            {% endif %}
+            <td>{{ poll.category }}</td>
+            <td>{{ poll.totalVotes }}</td>
+            <td>
+              {% if poll.published == 1 and poll.closed == 0 %}
+                <img src="{{ asset('images/tick.png') }}" width="15" height="10" alt="published"/>
+              {% elseif poll.published == 0 and poll.closed == 1 %}
+                <img src="{{ asset('images/delete.png') }}" width="15" height="10" alt="closed"/>
+              {% endif %}
+            </td>
+            <td id="vote">
+              <a href="{{ path('poll_results', {'id':poll.id}) }}" style="color:#0056b3">résultats</a>
+            </td>
+            <td>{{ poll.createdAt|date("d/m/y") }}</td>
+            {% if poll.closed == 0 %}
+              <td id="vote">
+                <a href="{{ path('poll_vote', {'id':poll.id}) }}" style="color:#0056b3">&nbsp;&nbsp;voter&nbsp;&nbsp;</a>
+              </td>
+            {% else %}
+              <td></td>
+            {% endif %}
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+
+      <div class="navigation">
+        {{ knp_pagination_render(pagination) }}
+      </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

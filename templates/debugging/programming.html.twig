@@ -1,0 +1,83 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<section>
+
+  <h2>Section</h2>
+
+    <div class="home">
+      <div class="row">
+
+        <div class="col-md-4">
+          <div class="card"><img src="{{ asset('images/card.jpg') }}" alt="Photo by Florian Olivo"></div>
+          <a href="{{ path('homepage') }}" class="link">Articles</a>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card"><img src="{{ asset('images/card.jpg') }}" alt="Photo by Florian Olivo"></div>
+          <a href="{{ path('debugging') }}" class="activ_link">Débogages</a>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card"><img src="{{ asset('images/card.jpg') }}" alt="Photo by Florian Olivo"></div>
+          <a href="{{ path('contact') }}" class="link">Contact</a>
+        </div>
+
+      </div>
+    </div>
+
+</section>
+
+<section>
+
+  <h2>Languages de programmation</h2>
+
+    <div class="debugging">
+      <div class="row">
+
+        <div class="col-md-7">
+
+          {% for debugging in pagination %}
+
+            <div class="blog-body-debug">
+              <a href="{{ path('debugging_show', {'id':debugging.id}) }}" class="blog-content-debug">
+                <p class="blog-title-debug">{{ debugging.title }}</p>
+                <p class="blog-date-debug">
+                  <span>posté le&nbsp;{{ debugging.createdAt|date("d/m/Y à H:i") }} - catégorie {{ debugging.category }}</span>
+                </p>
+              </a>
+            </div>
+
+          {% endfor %}
+
+          <div class="navigation">
+            {{ knp_pagination_render(pagination) }}
+          </div>
+        </div>
+
+        <div class="col-md-4 offset-md-1 offset-sm-0">
+
+          <div class="categories">
+            <h2 class="categories-title">Catégories</h2>
+            <div class="categories-body">
+              <p><a href="{{ path('debugging_programming') }}">Languages Prog.</a></p>
+              <p><a href="{{ path('debugging_framework') }}">Framework</a></p>
+            </div>
+          </div>
+
+          <div class="languages">
+            <h2 class="languages-title">Langues</h2>
+            <div class="languages-body">
+              <a href="{{ path('language') }}">Français/Anglais</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+{% if editMode %}
+
+<section>
+
+  <h2>Modifier un message d'erreur</h2>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 offset-md-1 offset-sm-0 offset-xs-0">
+
+        {{ form_start(formDebugging) }}
+
+        {{ form_row(formDebugging.title, {'attr': {'class': 'form-control' }}) }}
+
+        {{ form_row(formDebugging.solution, {'attr': { 'class': 'form-control' }}) }}
+
+        {{ form_row(formDebugging.solutioneng, {'attr': {'class': 'form-control' }}) }}
+
+        <button type="submit" class="btn btn-primary_create">modifier</button>
+
+        {{ form_end(formDebugging) }}
+
+        </div>
+      </div>
+    </div>
+
+</section>
+
+{% else %}
+
+<section>
+
+  <h2>Créer un nouveau message d'erreur</h2>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 offset-md-1 offset-sm-0 offset-xs-0">
+
+        {{ form_start(formDebugging) }}
+
+        {{ form_row(formDebugging.title, {'attr': {'class': 'form-control' }}) }}
+
+        {{ form_row(formDebugging.category, {'attr': {'class': 'form-control' }}) }}
+
+        {{ form_row(formDebugging.solution, {'attr': { 'class': 'form-control' }}) }}
+
+        {{ form_row(formDebugging.solutioneng, {'attr': {'class': 'form-control' }}) }}
+
+        <button type="submit" class="btn btn-primary_create">créer</button>
+
+        {{ form_end(formDebugging) }}
+
+        </div>
+      </div>
+    </div>
+
+</section>
+
+{% endif %}
+
+{% endblock %}

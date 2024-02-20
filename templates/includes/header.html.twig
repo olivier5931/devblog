@@ -1,0 +1,21 @@
+<div class="header">
+
+  <h1 id="blog">
+    <span title="letter">Dev Blog</span>
+  </h1>
+
+  <div class="row">
+    <div class="col-md-3 offset-md-9 offset-sm-7 offset-xs-5">
+      {% if app.user %}
+        <p class="logged_user" style="font-size: 1.5rem">{{ user.username }}
+          <a href="{{ path('app_logout') }}" id="logout">
+            |<i class="fa fa-sign-out" aria-hidden="true" style="font-size: 1.5rem"></i>
+          </a>
+        </p>
+      {% endif %}
+    </div>
+  </div>
+
+</div>
+
+

@@ -1,0 +1,81 @@
+easy_admin:
+    design:
+        menu:
+            - { label: 'Accueil', url: 'http://localhost:8000/accueil', rel: 'accueil' }
+            - { entity: 'User', params: { sortField: 'id', sortDirection: 'DESC' } }
+            - { entity: 'Article', params: { sortField: 'id', sortDirection: 'DESC' } }
+            - { entity: 'Debugging', params: { sortField: 'id', sortDirection: 'DESC' } }
+            - { entity: 'Comment' }
+            - { entity: 'Poll', params: { sortField: 'id', sortDirection: 'DESC' } }
+            - { entity: 'Opinion' }
+            - { entity: 'Statistic' }
+    list:
+        max_results: 300
+    entities:
+        User:
+            class: App\Entity\User
+            label: 'Utilisateurs'
+            list:
+                title: "Liste des %%entity_label%%"
+                fields: ['id', 'username', 'roles', 'language', 'status']
+            form:
+                fields:
+                    - { property: 'username'}
+                    - { property: 'roles', type: 'choice', type_options: { multiple: true, choices: { 'ROLE_GITHUB': 'ROLE_GITHUB', 'ROLE_ADMIN': 'ROLE_ADMIN', 'ROLE_SUPER_ADMIN': 'ROLE_SUPER_ADMIN' } } }
+                    - { property: 'language'}
+                    - { property: 'status'}
+        Article:
+            class: App\Entity\Article
+            label: 'Articles'
+            list:
+                title: "Liste des %%entity_label%%"
+                fields: ['id', 'title', 'titleeng', 'category', 'createdAt']
+            form:
+                fields:
+                    - { property: 'title'}
+                    - { property: 'titleeng'}
+                    - { property: 'category'}
+                    - { property: 'createdAt'}
+        Debugging:
+            class: App\Entity\Debugging
+            label: 'Erreurs'
+            list:
+                title: "Liste des %%entity_label%%"
+                fields: ['id', 'title', 'category', 'createdAt']
+            form:
+                fields:
+                    - { property: 'title'}
+                    - { property: 'category'}
+                    - { property: 'createdAt'}
+        Comment:
+            class: App\Entity\Comment
+            label: 'Commentaires'
+            list:
+                title: "Liste des %%entity_label%%"
+                fields: ['id', 'username', 'content']
+            disabled_actions: ['edit']
+        Poll:
+            class: App\Entity\Poll
+            label: 'Sondages'
+            list:
+                title: "Liste des %%entity_label%%"
+                fields: ['id', 'name', 'category', 'published', 'closed', 'createdAt']
+            disabled_actions: ['new']
+        Opinion:
+            class: App\Entity\Opinion
+            label: 'Opinions'
+            list:
+                title: "Liste des %%entity_label%%"
+                fields: ['id', 'name', 'votes', 'poll']
+            disabled_actions: ['new']
+        Statistic:
+            class: App\Entity\Statistic
+            label: 'Statistiques'
+            list:
+                title: "Liste des %%entity_label%%"
+                fields: ['id', 'user', 'poll', 'opinion']
+            disabled_actions: ['new', 'edit']
+    formats:
+        date:     'd/m/Y'
+        time:     'H:i'
+        datetime: 'd/m/Y H:i'

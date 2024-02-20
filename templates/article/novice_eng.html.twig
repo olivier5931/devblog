@@ -1,0 +1,87 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<section>
+
+  <h2>Section</h2>
+
+    <div class="home">
+      <div class="row">
+
+        <div class="col-md-4">
+          <div class="card"><img src="{{ asset('images/card.jpg') }}" alt="Photo by Florian Olivo"></div>
+          <a href="{{ path('homepage_eng') }}" class="activ_link">Articles</a>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card"><img src="{{ asset('images/card.jpg') }}" alt="Photo by Florian Olivo"></div>
+          <a href="{{ path('debugging_eng') }}" class="link">Debuggings</a>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card"><img src="{{ asset('images/card.jpg') }}" alt="Photo by Florian Olivo"></div>
+          <a href="{{ path('contact') }}" class="link">Contact</a>
+        </div>
+
+      </div>
+    </div>
+
+</section>
+
+<section>
+
+  <h2>Novice</h2>
+
+    <div class="article">
+      <div class="row">
+
+        <div class="col-md-7">
+
+          {% for article in pagination %}
+
+            <div class="blog-body">
+              <img src="/images/articles/{{ article.image }}" alt="Photo by Jess Bailey on Unsplash" id="medias">
+              <h2 class="blog-title">{{ article.titleeng }}</h2>
+              <p class="blog-content">{{ article.contenteng|raw }}</p>
+              <a href="{{ path('article_show', {'id':article.id}) }}" class="btn btn-primary btn-md">
+              read the article &rarr;</a>
+              <p class="blog-date">
+                <span>posted on&nbsp;{{ article.createdAt|date("d/m/Y at H:i") }} - {{ article.category }} category </span>
+              </p>
+            </div>
+
+          {% endfor %}
+
+          <div class="navigation">
+            {{ knp_pagination_render(pagination) }}
+          </div>
+        </div>
+
+        <div class="col-md-4 offset-md-1 offset-sm-0">
+
+          <div class="categories">
+            <h2 class="categories-title">Categories</h2>
+            <div class="categories-body">
+              <p><a href="{{ path('article_novice_eng') }}">Novice</a></p>
+              <p><a href="{{ path('article_programming_eng') }}">Programming Lang.</a></p>
+              <p><a href="{{ path('article_framework_eng') }}">Framework</a></p>
+              <p><a href="{{ path('article_mixed_eng') }}">Mixed Technologies</a></p>
+            </div>
+          </div>
+
+          <div class="languages">
+            <h2 class="languages-title">Languages</h2>
+            <div class="languages-body">
+              <a href="{{ path('language_eng') }}">French/English</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+</section>
+
+{% endblock %}

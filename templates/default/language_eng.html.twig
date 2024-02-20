@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+  <section>
+
+    <h2>Choix de la langue</h2>
+
+    <div class="choice_languages">
+
+      <div class="col-md-4 offset-md-1 offset-sm-0">
+
+        {{ form_start(formLanguageFr) }}
+
+        <img src="{{ asset('images/french.jpg') }}" id="img_lang" alt="french"/><br />
+
+        <button type="submit" class="btn btn-primary-lang1">submit</button>
+
+        <div style="display:none">{{ form_rest(formLanguageFr) }}</div>
+
+        {{ form_end(formLanguageFr) }}
+
+      </div>
+
+      <div class="col-md-4 offset-md-2 offset-sm-0">
+
+        <img src="{{ asset('images/english.jpg') }}" id="img_lang" alt="english"/><br />
+
+        <button type="submit" class="btn btn-primary-lang2" style="cursor: not-allowed;">activated</button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+{% endblock %}

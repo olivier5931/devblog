@@ -1,0 +1,73 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+  <section>
+
+    {% if app.request.hasPreviousSession %}
+      {% for type, messages in app.session.flashbag.all() %}
+        {% for message in messages %}
+          <div class="flash-{{ type }}">{{ message }}</div>
+        {% endfor %}
+      {% endfor %}
+    {% endif %}
+
+    <h2>Possible solutions</h2>
+
+    <div class="debugging_show">
+
+      <div class="show-body-debug">
+        <p class="show-title-debug">{{ debugging.title }}</p>
+        <p class="show-content-debug">{{ debugging.solutioneng|raw }}</p>
+        <p class="show-date-debug">
+          <span title="show">posted on&nbsp;{{ debugging.createdAt|date("d/m/Y at H:i") }} - category {{ debugging.category }}</span>
+        </p>
+      </div>
+
+      <div class="show-edit-debug">
+        {% if is_granted(['ROLE_ADMIN']) %}
+          <h3 class="edit">
+            <a href="{{ path('debugging_edit', {'id':debugging.id}) }}">edit the solutions</a>
+          </h3>
+        {% endif %}
+      </div>
+
+      <h3 class="comments-number">{{ debugging.comments | length }} comment(s)</h3>
+
+      <div class="comment">
+
+        {% for comment in debugging.comments %}
+          {% if comment.language == 'eng' %}
+
+            <div class="row" id="comment">
+              <div class="comment-body col-md-10 offset-md-1 offset-sm-0 offset-xs-0">
+                <span title="show">
+                  <i class="fa fa-user"></i>&nbsp;{{ comment.username }}&nbsp;&nbsp;&nbsp;
+                  <i class="fa fa-clock-o"></i>&nbsp;{{ comment.createdAt |date ("d/m/Y à H:i") }}
+                </span>
+                <p class="comment-post">{{ comment.content|raw }}</p>
+              </div>
+            </div>
+
+          {% endif %}
+        {% endfor %}
+
+        {% if app.user.status == 'enabled' %}
+
+          {{ form_start(formComment) }}
+
+          {{ form_widget(formComment.content, {'attr': {'placeholder': 'let a comment..'}}) }}
+
+            <button type="submit" class="btn btn-primary_show"><i class="fa fa-reply"></i> send</button>
+
+          {{ form_end(formComment) }}
+
+        {% endif %}
+
+      </div>
+
+    </div>
+
+  </section>
+
+{% endblock %}

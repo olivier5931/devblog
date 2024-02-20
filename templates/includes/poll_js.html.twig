@@ -1,0 +1,62 @@
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    // We retrieve the tag <div> in question which contains the attribute "data-prototype"
+    var $container = $('div#opinions');
+    // We define a unique counter to name the fields that we will add dynamically
+    var index = $container.find(':input').length;
+
+    // Add a new field each time you click on the add link
+    $('#add_choice').click(function(e) {
+      addChoice($container);
+      e.preventDefault(); // We avoid that a # appears in the URL
+      return false;
+    });
+
+    // We add a first field automatically if one does not already exist
+    if (index == 0) {
+      addChoice($container);
+    } else {
+      // If there are already choices, we add a delete link for each of them
+      $container.children('div').each(function() {
+        addDeleteLink($(this));
+      });
+    }
+
+    // The function that adds a ChoiceType form
+    function addChoice($container) {
+      // In the content of the "data-prototype" attribute, we replace:
+      // - the text "__name__label__" that it contains by the label of the field
+      // - the text "__name__" that it contains by the number of the field
+      var template = $container.attr('data-prototype')
+        .replace(/__name__label__/g, 'Choix n°' + (index+1))
+        .replace(/__name__/g,        index)
+      ;
+      // We create a jquery object that contains this template
+      var $prototype = $(template);
+      // We add to the prototype a link to delete the choice
+      addDeleteLink($prototype);
+      // Add the modified prototype to the end of the <div> tag
+      $container.append($prototype);
+      // Finally, we increment the counter so that the next addition is done with another number
+      index++;
+    }
+
+    // The function that adds a deletion link from a choice
+    function addDeleteLink($prototype) {
+      // Create a link
+      var $deleteLink = $('<a href="#" class="btn btn-danger">Supprimer</a>');
+      // Add a link
+      $prototype.append($deleteLink);
+      // Adding the listener on the click of the link to actually delete the choice
+      $deleteLink.click(function(e) {
+        $prototype.remove();
+        e.preventDefault(); // We avoid that a # appears in the URL
+        return false;
+      });
+    }
+
+  });
+</script>

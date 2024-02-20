@@ -1,0 +1,1394 @@
+body {
+	margin: 0 2rem;
+  background: url("../images/body.jpg");
+  font-family: "Playfair Display", times, serif;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+html {
+	font-size: 62.50%
+}
+
+section h2, section h3, section h4 {
+	padding: 0.5rem;
+	list-style: none
+}
+
+section h2, section h3, section h4 {
+	letter-spacing: 0.7rem
+}
+
+span[title="letter"], #img_caption, .blog-title-debug, .blog-date-debug, .container .polls_table th {
+	font-weight: bold
+}
+
+a, a:hover, span {
+	text-decoration: none
+}
+
+hr {
+	width: 50%
+}
+
+html section h1, .show-title-debug {
+	font-size: 2rem
+}
+
+html section h2 {
+	margin: 0 2rem 2rem 2rem
+}
+
+html section h2, .activ_link, .link, .categories .categories-body p a, .languages .languages-body a, .searches-body a,
+.blog-title-debug, .show-content-debug {
+	font-size: 1.5rem
+}
+
+.navbar-collapse, #article_title, #article_titleeng, #article_category, #article_content, #article_contenteng,
+#article_fullcontent, #article_fullcontenteng, #article_url, #img_caption, #poll_opinions_0_name,
+#poll_opinions_1_name, #poll_opinions_2_name, #poll_opinions_3_name, #poll_opinions_4_name, #poll_opinions_5_name,
+#poll_opinions_6_name, #poll_opinions_7_name, #poll_opinions_8_name, #poll_opinions_9_name, #debugging_title,
+#debugging_category, #debugging_solution, #debugging_solutioneng, .blog-content, .blog-date-debug, .show-content,
+.show-full-content, form #comment_content, .comment-body, .footer, #poll_name, #poll_category, #poll_published,
+#poll_closed, #poll_opinions_0_name, #poll_opinions_1_name, #poll_opinions_2_name, #poll_opinions_3_name,
+#poll_opinions_4_name, #poll_opinions_5_name, #poll_opinions_6_name, #poll_opinions_7_name, #poll_opinions_8_name, #poll_opinions_9_name, #poll_title {
+	font-size: 1.3rem
+}
+
+html section h3, label, .flash-success, .flash-warning, .flash-danger, .blog-date,
+.show-date p span, span[title="show"], #contact_username, #contact_email, #contact_subject,
+#contact_body, .poll-date, .form-control-opinions, .container .polls_table th, .container
+.polls_table td, .results .fill_color_1, .results .fill_color_2, .results .fill_color_3,
+.results .fill_color_4, .results .fill_color_5, .results .fill_color_6, .results .fill_color_7,
+.results .fill_color_8, .results .fill_color_9, .results .fill_color_10 {
+	font-size: 1.17rem
+}
+
+html section h4, .btn-danger {
+	font-size: 1rem
+}
+
+h1, h2, h3, h4, section, .flash-success, .flash-warning, .flash-danger, .show-content {
+	text-align: center
+}
+
+.header, .navbar, .flash-success, .flash-warning, .flash-danger {
+	border-radius: 6px
+}
+
+h2, h3, img, .nav-link:hover, .edit, .comments-number, .comment-body, #comment_content, .activ_link, .link,
+.categories-body p:hover, .languages-body:hover, .searches-body:hover, .blog-body-debug, .main-sidebar,
+.form-control-opinions, #poll_title, label[for=vote_opinions_0], label[for=vote_opinions_1], label[for=vote_opinions_2],
+label[for=vote_opinions_3], label[for=vote_opinions_4], label[for=vote_opinions_5], label[for=vote_opinions_6],
+label[for=vote_opinions_7], label[for=vote_opinions_8], label[for=vote_opinions_9], .results .fill, .container .polls_table th,
+.container .polls_table td, #poll_opinions_0_name, #poll_opinions_1_name, #poll_opinions_2_name, #poll_opinions_3_name,
+#poll_opinions_4_name, #poll_opinions_5_name, #poll_opinions_6_name, #poll_opinions_7_name, #poll_opinions_8_name,
+#poll_opinions_9_name {
+	border-radius: 4px
+}
+
+section h1, section h2, section h3, .nav-link:hover, .edit a, .comment-body, .activ_link, .link:hover, .categories-body p a:hover,
+.languages-body a:hover, .searches-body a:hover, .btn-primary:hover, .btn-primary_create:hover, .btn-primary_show:hover,
+.btn-primary_submit_search:hover, .btn-primary_search:hover, .btn-danger:hover {
+	opacity: 0.85
+}
+
+.header .logged_user, .form-control, .connexion, .flash-success, .flash-warning, .flash-danger, .alert-danger,
+.btn-primary, .btn-primary-lang1, .btn-primary-lang2, .btn-primary_create, .btn-primary_poll, .blog-title,
+.blog-title-debug, span[title="show"], #img_caption, .form-opinions {
+	letter-spacing: 0.3rem
+}
+
+html, section, .header, a, a:hover, span[title="letter1"], span[title="letter2"], span[title="letter3"], .navbar-dark .navbar-nav .nav-link,
+.navbar-dark .navbar-nav .nav-link:hover, #logout, .form-control, input[type="text"]::placeholder, .fa, .fas, .blog-date,
+.show-date, .edit a, .activ_link, .activ_link:hover, .link, .link:hover, .categories-body p a, .languages-body a, .searches-body a,
+#contact_username, #contact_email, #contact_subject, #contact_body, #article_image, #article_title, #article_titleeng,
+#article_category, #article_content, #article_contenteng, #article_fullcontent, #article_fullcontenteng, #article_url, #img_caption,
+#comment_content, #comment_content::placeholder, #debugging_title, #debugging_category, #debugging_solution, #debugging_solutioneng,
+#search_title, #poll_name, #poll_nameeng, #poll_category, #poll_published, #poll_closed, #poll_opinions_0_name,
+#poll_opinions_1_name, #poll_opinions_2_name, #poll_opinions_3_name, #poll_opinions_4_name, #poll_opinions_5_name,
+#poll_opinions_6_name, #poll_opinions_7_name, #poll_opinions_8_name, #poll_opinions_9_name, .btn-primary, .btn-primary-lang1,
+.btn-primary-lang2, .btn-primary_create, .btn-primary_show, .btn-primary_poll, .btn-primary:hover, .btn-primary-lang1:hover,
+.btn-primary_create:hover, .btn-primary_show:hover, .btn-primary_poll:hover, .btn-primary_submit_search,
+.btn-primary_submit_search:hover, .btn-primary_search, .btn-primary_search:hover, .page-item.disabled .page-link,
+.page-item.active .page-link, .page-item .page-link, .footer, .container .polls_table th {
+	color: #dcc1b0;
+}
+
+h2, h3, h4, input, .nav-link:hover, .edit:hover, .activ_link, .link:hover, .categories-body p:hover, .languages-body:hover,
+.searches-body:hover, .btn-primary_poll:hover, .edit, .edit:hover, .form-control:focus, .comment-body, .btn-primary,
+.btn-primary:hover, .btn-primary-lang1, .btn-primary-lang2, .btn-primary_create, .btn-primary_submit_search,
+.btn-primary_search, .btn-primary_poll, .btn-primary_show, .page-item.disabled .page-link, .page-item.active .page-link,
+.page-item .page-link, #article_category option, #debugging_category option, #poll_category option, .container .polls_table tr:hover, #vote:hover,
+#edit:hover, #vote:hover, input[type=radio] + label:hover, input[type=radio]:checked + label {
+	background: grey
+}
+
+#comment_content, #contact_username, #contact_email, #contact_subject, #contact_body, #article_image, #article_title,
+#article_titleeng, #article_content, #article_contenteng, #article_fullcontent, #article_fullcontenteng, #article_url,
+#debugging_title, #debugging_solution, #debugging_solutioneng, #poll_name, #poll_opinions_0_name,
+#poll_opinions_1_name, #poll_opinions_2_name, #poll_opinions_3_name, #poll_opinions_4_name, #poll_opinions_5_name,
+#poll_opinions_6_name, #poll_opinions_7_name, #poll_opinions_8_name, #poll_opinions_9_name, #search_title {
+	background: transparent;
+}
+
+.form-control, .blog-body, .activ_link, .link {
+	background-color: rgba(0, 0, 0, 0.03);
+	border-top-color: rgba(0, 0, 0, 0.125)
+}
+
+.form-control:focus, input:focus, #comment_content:focus, .btn-md:focus, .btn-md-vote:focus, .btn-primary:focus,
+.btn-primary-lang1:focus, .btn-primary-lang2:focus, .btn-primary_create:focus, .btn-primary_show:focus,
+.btn-primary_submit_search:focus, .btn-primary_search:focus, .btn-primary_poll:focus {
+	outline: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none
+}
+
+input:focus, textarea:focus {
+	border: 2px solid gold !important
+}
+
+#search_title {
+	margin-bottom: 2rem
+}
+
+#search_title:focus {
+	border: 2px solid grey !important
+}
+
+#medias, #img_show, .activ_link, .link, input, select, textarea, .btn-danger, .polls_table, #poll_name, #poll_category,
+#poll_opinions_0_name, #poll_opinions_1_name, #poll_opinions_2_name, #poll_opinions_3_name, #poll_opinions_4_name,
+#poll_opinions_5_name, #poll_opinions_6_name, #poll_opinions_7_name, #poll_opinions_8_name, #poll_opinions_9_name, .btn-danger {
+	width: 100%
+}
+
+/*header*/
+.header, .navbar {
+	margin: 0 2rem
+}
+.header #blog {
+	font-style: italic;
+	padding: 2rem 2rem 1.2rem 2rem;
+	letter-spacing: 5rem
+}
+
+.header .logged_user {
+	margin-bottom: 0.1rem;
+	float: right;
+	padding-right: 0.5rem
+}
+
+span[title="letter"] {
+	font-size: 7rem
+}
+
+/*navbar*/
+.navbar {
+	padding: 0;
+	letter-spacing: 0.2rem;
+	text-align: center
+}
+
+.navbar a {
+	padding: 1rem 0
+}
+
+.navbar-collapse li {
+	margin-bottom: 0;
+	font-style: italic;
+	padding: 0.2rem 0
+}
+
+.nav-item {
+	margin: 0 0.3rem
+}
+
+.nav-link:hover, .card, .btn-primary:hover, .btn-primary-lang1:hover, .btn-primary_create:hover, .btn-primary_show:hover,
+.btn-primary_submit_search:hover, .btn-primary_search:hover, .btn-primary_poll:hover {
+	border-color: grey
+}
+
+.nav-link-github img {
+	padding-top: 0.3rem
+}
+
+.navbar-toggler:not(:disabled):not(.disabled) {
+	margin: 0.5rem 0
+}
+
+.fa-check-circle {
+	margin-right: 0.5rem
+}
+
+.fa-sign-out {
+	margin-left: 0.5rem
+}
+
+/*language*/
+.choice_languages {
+	padding: 10rem 0 6.9rem 0;
+	display: flex
+}
+
+/*card*/
+.card {
+	margin-bottom: 0.5rem
+}
+
+.card img {
+	height: 20rem
+}
+
+.activ_link, .link {
+	letter-spacing: 1rem;
+	display: block;
+	padding: 0.5rem 1.2rem;
+	line-height: 1.42857143;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	border: 1px solid grey
+}
+
+.activ_link:hover {
+	opacity: 0.75
+}
+
+/*form*/
+.form-control, .form-opinions {
+	border: 1px solid grey
+}
+
+.form-control {
+	padding-left: 1.5rem
+}
+
+label, input, .navigation, .btn-danger, #poll_title, .flash-success, .flash-warning, .flash-danger, .alert-danger {
+	letter-spacing: 0.5rem
+}
+
+label {
+	margin-bottom: 1rem
+}
+
+#medias {
+	max-height: 24.3rem
+}
+
+/*blog*/
+.home, .article_home, .article, .debugging {
+	margin: 5rem 2rem
+}
+
+#img_show {
+	height: 31.5rem;
+	padding: 0 4rem
+}
+
+#article_category, #debugging_category, #poll_category {
+	height: 3rem
+}
+
+.blog-body, .blog-body-debug, .debugging-body {
+	margin-bottom: 3rem
+}
+
+.blog-title {
+	margin: 0
+}
+
+.blog-title-debug, .blog-date-debug {
+	color: red
+}
+
+.blog-body-debug {
+	border: 2px solid red
+}
+
+.blog-body-debug:hover {
+	background: grey;
+	opacity: 0.85
+}
+
+.blog-content, .blog-content-debug {
+	padding: 1rem
+}
+
+.btn-primary {
+	margin-bottom: 1rem
+}
+
+.blog-date-debug {
+	margin: 0;
+	padding: 0
+}
+
+#debugging_solution, #debugging_solutioneng {
+	height: 20rem
+}
+
+.input-group {
+	padding: 2rem 0
+}
+
+.form-control {
+	margin-bottom: 1.5rem
+}
+
+/*article*/
+#article_fullcontent, #article_fullcontenteng {
+	height: 20rem
+}
+
+#article_content, #article_contenteng, #article_fullcontent, #article_fullcontenteng, #error_name, #error_solution,
+#error_solutioneng {
+	word-wrap: break-word
+}
+
+.btn-danger {
+	margin: 0 0 1.5rem 0
+}
+
+/*catégories*/
+.categories-title, .languages-title, .searches-title {
+	margin: 0
+}
+.categories-body {
+	margin: 4rem 0
+}
+
+.categories-body p, .languages-body, .searches-body {
+	letter-spacing: 0.7rem;
+	padding: 0.2rem 0;
+	margin: 4rem 0
+}
+
+.categories-body p:hover, .languages-body:hover, .searches-body:hover {
+	border: 1px solid grey;
+	padding: 0.1rem 0
+}
+
+.show-content, .show-full-content {
+	letter-spacing: 0.1rem
+}
+
+.show-content, .show-content-debug {
+	font-weight: bold
+}
+
+.show-content {
+	padding: 2rem 6rem
+}
+
+.show-title-debug, .show-content-debug {
+	padding: 0 4rem
+}
+
+.show-body-debug, .show-date-debug {
+	color: green
+}
+
+.show-body-debug {
+	border: 6px solid green;
+	margin: 0 6rem
+}
+
+.show-full-content {
+	word-wrap: break-word;
+	text-align: left;
+	padding: 3rem 6rem
+}
+
+.blog-date {
+	padding-bottom: 0.1rem
+}
+
+.show-date {
+	padding: 1rem 4rem
+}
+
+.show-date p {
+	text-align: center
+}
+
+.show-date .edit {
+	margin: 1.5rem 2rem
+}
+
+.show-edit-debug .edit {
+	margin: 1.5rem 5.8rem
+}
+
+.show-date .edit a, .show-edit-debug .edit a {
+	letter-spacing: 1.2rem
+}
+
+.edit:hover {
+	text-decoration: none
+}
+
+/*comments*/
+.comments-number {
+	margin: 0 6rem 3rem 6rem;
+	padding: 0.5rem 0;
+	letter-spacing: 0.9rem
+}
+
+#comment {
+	margin-bottom: 2rem
+}
+
+.comment-body {
+	text-align: left;
+	border: 2px solid grey
+}
+
+#comment_content, .comment-body {
+	padding: 0.5rem 1.5rem
+}
+
+.comment-post {
+	padding-top: 0.5rem;
+	text-align: left;
+	letter-spacing: 0.1rem;
+	word-break: break-all;
+	line-height: 1.8
+}
+
+#comment_content {
+	height: 7.5rem;
+	width: 83.5%;
+	letter-spacing: 0.2rem;
+	margin: 2rem 0 4rem 1rem
+}
+
+.show-comments {
+	padding: 0 2rem 3rem 2rem
+}
+
+/*btn-primary*/
+.btn-primary, .btn-primary-lang1, .btn-primary-lang2, .btn-primary_create, .btn-primary_show, .btn-primary_submit_search,
+.btn-primary_search {
+	border-color: grey;
+	text-align: center
+}
+
+.btn-primary, .btn-primary_create {
+	padding: 0.4rem 2rem
+}
+
+.btn-primary-lang1, .btn-primary-lang2 {
+	margin: 5rem 0;
+	padding: 0.4rem 6rem
+}
+
+.btn-primary-lang2:hover {
+	background-image: none
+}
+
+.btn-primary_show {
+	letter-spacing: 1.2rem
+}
+
+.btn-primary_show {
+	margin-bottom: 5rem;
+	padding: 0.4rem 4rem;
+	letter-spacing: 1.2rem
+}
+
+.btn-primary_create {
+	width: 25%;
+	margin: 1.5rem 0 8rem 0
+}
+
+.btn-primary_submit_search, .btn-primary_search {
+	width: 100%;
+	margin: 1.5rem 0 2rem 0
+}
+
+.btn-primary_submit_search {
+	letter-spacing: 0.9rem
+}
+
+.btn-primary_search {
+	letter-spacing: 0.5rem
+}
+
+/*pagination*/
+.navigation {
+	font-size: 1.2rem
+}
+
+.pagination {
+	display: flex;
+	justify-content: center
+}
+
+.page-item.disabled .page-link, .page-item.active .page-link, .page-item .page-link {
+	border-color: #F7F1B8
+}
+
+.page-item.active .page-link, .page-item.disabled .page-link:hover, .page-item .page-link:hover {
+	background: #18191B
+}
+
+.footer {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/*poll*/
+.list_polls h2 {
+	margin-bottom: 3rem
+}
+
+.polls_table {
+	border-collapse: unset;
+	margin: 5rem 0
+}
+
+.container .polls_table th, .container .polls_table td, .container .polls_table td a {
+	letter-spacing: 0.2rem
+}
+
+.container .polls_table th, .container .polls_table td {
+	padding-top: 1.2%;
+	padding-bottom: 1.2%
+}
+
+/*create poll*/
+.form-control {
+	margin-bottom: 1.5rem
+}
+
+.btn-primary_poll {
+	width: 25%;
+	margin: 1.5rem 0 5rem 0
+}
+
+.option_poll {
+	margin: 1rem 0
+}
+
+.btn-danger {
+	margin-bottom: 1.5rem
+}
+
+.checkbox_fields {
+	display: flex;
+	justify-content: space-around;
+	margin: 3rem 0 2rem 0
+}
+
+/*vote*/
+#poll_title {
+	margin: 5rem 0;
+	padding: 0.4rem 0
+}
+
+input[type=radio] {
+	display: none;
+	margin: 1rem 0
+}
+
+input[type=radio] + label {
+	display: block;
+	margin: 0.1rem;
+	padding: 0.8rem 2rem;
+	font-size: 1.3rem;
+	letter-spacing: 0.7rem
+}
+
+.btn-md-vote {
+	margin: 5rem 0 6.6rem 0;
+	width: 25%
+}
+
+/*results*/
+.form-control-opinions {
+	margin: 0.2rem 0 4.1rem 0;
+	border: 1px solid grey;
+	letter-spacing: 0.7rem;
+	padding: 0.4rem 0
+}
+
+.results {
+	padding-bottom: 0.5rem;
+	margin: 3.8rem 0
+}
+
+.results .fill {
+	-webkit-animation: fill_animation 0.7s ease-out;
+	-moz-animation: fill_animation 0.7s ease-out;
+	animation: fill_animation 0.7s ease-out;
+	letter-spacing: 1rem
+}
+
+.results .fill_color_1, .results .fill_color_2, .results .fill_color_3, .results .fill_color_4, .results .fill_color_5,
+.results .fill_color_6, .results .fill_color_7, .results .fill_color_8, .results .fill_color_9, .results .fill_color_10 {
+	background-color: grey
+}
+
+/*alert*/
+.flash-success, .flash-warning, .flash-danger, .alert-danger {
+	padding: 0.3rem;
+	margin: 0 2rem
+}
+
+/*error*/
+.error {
+	font-size: 3rem;
+	margin: 3.8rem 0
+}
+
+/*email*/
+.contact_form {
+	margin: 3rem 0 6rem 0
+}
+
+#contact_body {
+	height: 10rem
+}
+
+#contact_username, #contact_email, #contact_subject, #contact_body {
+	margin-bottom: 2rem
+}
+
+/* Extra large devices (large desktops, 1440px and up) */
+@media (min-width: 1440px) {
+	/* general */
+	body {
+		margin: 0 14rem;
+		font-size: 1rem
+	}
+
+	html section h2 {
+		font-size: 1.6rem;
+		letter-spacing: 0.8rem
+	}
+
+	label {
+		font-size: 1.2rem
+	}
+
+	span[title="letter"] {
+		font-size: 8rem;
+		letter-spacing: 5rem;
+		margin-left: 13rem
+	}
+
+	.connexion #_submit {
+		padding: 0.4rem 7rem
+	}
+
+	.error {
+		font-size: 3.2rem;
+		margin: 3.5rem 0
+	}
+
+	/* blog */
+	.home, .article, .debugging {
+		margin: 6rem 2rem
+	}
+
+	.card img {
+		height: 22rem
+	}
+
+	#img_show {
+		height: 36.5rem
+	}
+
+	#img_caption {
+		letter-spacing: 0.9rem
+	}
+
+	.categories-body p, .languages-body, .searches-body {
+		letter-spacing: 0.8rem;
+		margin: 5rem 0
+	}
+
+	.comment {
+		margin: 5rem 0 8rem 0
+	}
+
+	.comments-number {
+		letter-spacing: 1.1rem
+	}
+
+	span[title="show"] {
+		letter-spacing: 0.4rem
+	}
+
+	.btn-primary_show {
+		padding: 0.4rem 8rem;
+		letter-spacing: 1.4rem
+	}
+
+	.btn-primary_create {
+		letter-spacing: 0.5rem
+	}
+
+	/* poll */
+	#poll_title {
+		margin: 6rem 0
+	}
+
+	/* poll */
+	label[for=vote_opinions_0], label[for=vote_opinions_1], label[for=vote_opinions_2], label[for=vote_opinions_3],
+	label[for=vote_opinions_4], label[for=vote_opinions_5], label[for=vote_opinions_6], label[for=vote_opinions_7],
+	label[for=vote_opinions_8], label[for=vote_opinions_9] {
+		font-size: 1.5rem
+	}
+}
+
+/* Large devices (desktops, 992px to 1280px) */
+@media (min-width: 992px) and (max-width: 1280px) {
+	/* general */
+	body {
+		margin: 0 8rem;
+		font-size: 1rem
+	}
+
+	html section h2 {
+		font-size: 1.4rem;
+		letter-spacing: 0.6rem
+	}
+
+	span[title="letter"] {
+		font-size: 6rem;
+		letter-spacing: 3rem;
+	}
+
+	.connexion #_submit {
+		padding: 0.4rem 5rem
+	}
+
+	.navbar a {
+		letter-spacing: 0.2rem
+	}
+
+	/* blog */
+	.home, .article_home, .article, .debugging {
+		margin: 4rem 0
+	}
+
+	.card img {
+		height: 18rem
+	}
+
+	span[title="show"] {
+		letter-spacing: 0.2rem
+	}
+
+	#img_show {
+		height: 26.5rem
+	}
+
+	#img_caption {
+		letter-spacing: 0.5rem
+	}
+
+	.card img {
+		min-width: 25rem
+	}
+
+	.categories-body p, .languages-body, .searches-body {
+		letter-spacing: 0.65rem
+	}
+
+	.categories-body {
+		margin: 2rem 0
+	}
+
+	.choice_languages {
+		padding: 10rem 0 7rem 0
+	}
+
+	.comments-number {
+		letter-spacing: 0.8rem
+	}
+
+	.comment {
+		margin: 5rem 0 6rem 0
+	}
+
+	.comment-img {
+		margin: 0 2rem 0 7.2rem
+	}
+
+	.comment-img img {
+		width: 98%;
+		height: 100%
+	}
+
+	#comment_content {
+		width: 88%
+	}
+
+	.btn-primary_show {
+		padding: 0.4rem 6rem;
+		letter-spacing: 1.1rem
+	}
+
+	/* poll */
+	#poll_title {
+		margin: 4rem 0
+	}
+}
+
+/* Medium devices (tablets, 768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+	/* general */
+	body {
+		margin: 0 6rem;
+		font-size: 0.5rem
+	}
+
+	html section h2 {
+		font-size: 1.3rem;
+		letter-spacing: 0.5rem
+	}
+
+	span[title="letter"] {
+		font-size: 5rem;
+		letter-spacing: 2rem
+	}
+
+	.header .logged_user {
+		letter-spacing: 0.15rem
+	}
+
+	.connexion #_submit {
+		padding: 0.4rem 4rem
+	}
+
+	.navbar a {
+		letter-spacing: 0.8rem
+	}
+
+	.error {
+		font-size: 2.5rem;
+		margin: 7rem 0
+	}
+
+	/* blog */
+	.home, .article_home, .article, .debugging {
+		margin: 3rem 0
+	}
+
+	.card img {
+		height: 16rem
+	}
+
+	#img_show {
+		height: 21.5rem
+	}
+
+	#img_caption {
+		display: none
+	}
+
+	.categories-body {
+		margin: 1rem 0
+	}
+
+	.categories-body p, .languages-body, .searches-body {
+		letter-spacing: 0.5rem;
+		margin: 3rem 0
+	}
+
+	.choice_languages {
+		padding: 10rem 0 4.2rem 0
+	}
+
+	.show-content {
+		padding: 1rem 4rem
+	}
+
+	.show-full-content {
+		padding: 1.5rem 4rem
+	}
+
+	.show-date .edit {
+		margin: 0
+	}
+
+	.comments-number {
+		margin: 0 4rem;
+		letter-spacing: 0.7rem
+	}
+
+	.comment {
+		margin: 5rem 0
+	}
+
+	.comment-img {
+		margin: 0 1rem 0 5.8rem
+	}
+
+	.comment-img img {
+		width: 98%;
+		height: 100%
+	}
+
+	#comment_content {
+		width: 88%;
+		margin-left: -0.5rem
+	}
+
+	.btn-primary_show {
+		padding: 0.4rem 6rem;
+		letter-spacing: 1rem
+	}
+
+	span[title="show"] {
+		letter-spacing: 0.1rem
+	}
+
+	span[title="search-date"] {
+		letter-spacing: 0.2rem
+	}
+
+	/* poll */
+	.polls_table {
+		margin: 2rem 0
+	}
+
+	.container .polls_table {
+		max-width: 768px
+	}
+
+	.container .polls_table th, .container .polls_table td, .container .polls_table td a {
+		letter-spacing: 0.2rem;
+		font-size: 1.2rem
+	}
+
+	#poll_title {
+		margin: 3rem 0
+	}
+
+	.list_polls h2, label[for=vote_opinions_0], label[for=vote_opinions_1], label[for=vote_opinions_2], label[for=vote_opinions_3],
+	label[for=vote_opinions_4], label[for=vote_opinions_5], label[for=vote_opinions_6], label[for=vote_opinions_7],
+	label[for=vote_opinions_8], label[for=vote_opinions_9] {
+		font-size: 1.17rem
+	}
+
+	.btn-md-vote {
+		margin: 5rem 0 4.5rem 0
+	}
+
+	.results {
+		margin: 2.2rem 0
+	}
+}
+
+/* Small devices (landscape phones, 576px to 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+	/* general */
+	body {
+		margin: 0 6rem;
+		font-size: 0.5rem
+	}
+
+	html section h2, .comments-number {
+		font-size: 1.2rem;
+		letter-spacing: 0.4rem
+	}
+
+	span[title="letter3"] {
+		font-size: 4rem;
+		letter-spacing: 1rem;
+	}
+
+	.connexion #_submit {
+		padding: 0.4rem 3rem
+	}
+
+	.navbar a {
+		letter-spacing: 0.8rem
+	}
+
+	.content {
+		font-size: 0.75rem
+	}
+
+	.error {
+		font-size: 2.5rem;
+		margin: 6.6rem 0
+	}
+
+	/* blog */
+	.home, .article_home, .article, .debugging {
+		margin: 2rem 0
+	}
+
+	.card img {
+		height: 14rem
+	}
+
+	#img_show {
+		height: 16.5rem
+	}
+
+	#img_caption {
+		display: none
+	}
+
+	span[title="show"] {
+		letter-spacing: 0
+	}
+
+	.categories-body {
+		margin: 1rem 0
+	}
+
+	.categories-body p, .languages-body, .searches-body {
+		letter-spacing: 0.8rem;
+		margin: 3rem 0
+	}
+
+	.show-content, .show-full-content, .show-date {
+		padding: 1rem 0
+	}
+
+	.show-body-debug {
+		margin: 0 2rem
+	}
+
+	.pagination {
+		margin-bottom: 5rem
+	}
+
+	.comments-number {
+		margin: 0 2rem 2rem 2rem;
+		letter-spacing: 0.6rem
+	}
+
+	.comment {
+		margin: 2rem 0 4rem 0
+	}
+
+	.comment-img {
+		display: none
+	}
+
+	.comment-body {
+		margin: 0 1.5rem
+	}
+
+	#comment_content {
+		width: 100%;
+		margin: 2rem 0
+	}
+
+	.btn-primary_show {
+		padding: 0.4rem 5rem;
+		letter-spacing: 0.9rem
+	}
+
+	/* poll */
+	.polls_table {
+		margin: 2rem 0
+	}
+
+	.container {
+		max-width: 576px
+	}
+
+	.container .polls_table th, .container .polls_table td, .container .polls_table td a {
+		letter-spacing: 0.1rem;
+		font-size: 1.1rem
+	}
+
+	.container .polls_table th, .container .polls_table td {
+		padding-top: 1%;
+		padding-bottom: 1%
+	}
+
+	.container .polls_table td:nth-child(4), .container .polls_table th:nth-child(4) {
+		display: none
+	}
+
+	#poll_title {
+		margin: 3rem 0
+	}
+
+	.list_polls h2, label[for=vote_opinions_0], label[for=vote_opinions_1], label[for=vote_opinions_2], label[for=vote_opinions_3],
+	label[for=vote_opinions_4], label[for=vote_opinions_5], label[for=vote_opinions_6], label[for=vote_opinions_7],
+	label[for=vote_opinions_8], label[for=vote_opinions_9] {
+		font-size: 1.17rem
+	}
+
+	.results {
+		margin: 1rem 0
+	}
+}
+
+/* Very small devices (phones, 380px to 575px) */
+@media (min-width: 380px) and (max-width: 575px) {
+	/* general */
+	body {
+		margin: 0 4rem;
+		font-size: 0.5rem
+	}
+
+	html section h2, .comments-number {
+		font-size: 1.17rem;
+		letter-spacing: 0.3rem
+	}
+
+	span[title="letter"] {
+		font-size: 4rem;
+		letter-spacing: 1rem
+	}
+
+	.connexion #_submit {
+		padding: 0.4rem 2rem
+	}
+
+	.navbar a {
+		letter-spacing: 0.8rem
+	}
+
+	.contact_form {
+		margin: 2rem 0 4rem 0
+	}
+
+	.error {
+		font-size: 2rem;
+		margin: 5.3rem 0
+	}
+
+	/* blog */
+	.home, .article_home, .article, .debugging, .comment {
+		margin: 1rem 0 3rem 0
+	}
+
+	.card img, #img_show {
+		height: 11.5rem
+	}
+
+	#img_show {
+		padding: 0 2rem
+	}
+
+	#img_caption {
+		display: none
+	}
+
+	.blog-content {
+		padding: 1rem 0
+	}
+
+	.show-content, .show-full-content, .show-date {
+		padding: 1rem 0
+	}
+
+	.show-date .edit a {
+		letter-spacing: 1rem
+	}
+
+	.navigation {
+		font-size: 1.2rem;
+		letter-spacing: 0.5rem;
+		margin-bottom: 1rem
+	}
+
+	.comments-number {
+		margin: 0 2rem 2rem 2rem;
+		letter-spacing: 0.5rem
+	}
+
+	.categories-body {
+		margin: 0
+	}
+
+	.searches-body {
+		margin-bottom: 0
+	}
+
+	.choice_languages {
+		padding: 7.5rem 0 4.5rem 0;
+		flex-direction: column
+	}
+
+	form[name=language_eng] {
+		margin-top: 5rem
+	}
+
+	#img_lang {
+		width: 300px;
+		height: 150px
+	}
+
+	.btn-primary {
+		margin-bottom: 6rem
+	}
+
+	.comment {
+		margin: 1rem 0 4rem 0
+	}
+
+	.comment-img {
+		display: none
+	}
+
+	.comment-body {
+		margin: 0 1.5rem
+	}
+
+	#comment_content {
+		width: 100%;
+		margin: 2rem 0
+	}
+
+	.btn-primary_show {
+		padding: 0.4rem 4rem;
+		letter-spacing: 0.8rem
+	}
+
+	span[title="show"] {
+		letter-spacing: 0
+	}
+
+	.pagination {
+		margin-bottom: 5rem
+	}
+
+	.show-date .edit, .comments-number {
+		margin: 0
+	}
+
+	/* poll */
+	#poll_title {
+		margin: 1.2rem 0
+	}
+
+	.btn-md-vote {
+		margin: 5rem 0 4rem 0
+	}
+
+	.results {
+		margin: 0
+	}
+}
+
+/* Very small devices (phones, min to 379px) */
+@media (max-width: 379px) {
+	/* general */
+	body {
+		margin: 0 2rem;
+		font-size: 0.5rem
+	}
+
+	html section h2 {
+		font-size: 1.17rem;
+	}
+
+	span[title="letter"] {
+		font-size: 3rem;
+		letter-spacing: 1rem;
+	}
+
+	.navbar a {
+		letter-spacing: 0.8rem
+	}
+
+	.connexion #_submit {
+		padding: 0.4rem 1rem
+	}
+
+	.contact_form {
+		margin: 2rem 0 4rem 0
+	}
+
+	.show-content, .show-full-content, .show-date {
+		padding: 1rem 0
+	}
+
+	/* blog */
+	.home, .article_home, .article, .debugging, .comment {
+		margin: 3rem 0
+	}
+
+	.card img, #img_show {
+		height: 11.5rem
+	}
+
+	#img_show {
+		padding: 0 2rem
+	}
+
+	#img_caption {
+		display: none
+	}
+
+	.blog-content {
+		padding: 1rem 0
+	}
+
+	.show-date .edit a {
+		letter-spacing: 0.8rem
+	}
+
+	.navigation {
+		font-size: 1.2rem;
+		letter-spacing: 0.5rem;
+		margin-bottom: 3rem
+	}
+
+	.comments-number {
+		margin: 0 2rem 2rem 2rem;
+		letter-spacing: 0.5rem;
+	}
+
+	.categories-body {
+		margin: 0
+	}
+
+	.categories-body p, .languages-body, .searches-body {
+		letter-spacing: 0.5rem;
+		margin: 2rem 0
+	}
+
+	.languages-body a, .searches-body a {
+		margin-bottom: 0
+	}
+
+	.choice_languages {
+		padding: 7.5rem 0 4.5rem 0;
+		flex-direction: column
+	}
+
+	form[name=language_eng] {
+		margin-top: 5rem
+	}
+
+	#img_lang {
+		width: 300px;
+		height: 150px
+	}
+
+	#comment_content {
+		margin: 2rem 0;
+		width: 87%
+	}
+
+	.btn-primary_show {
+		padding: 0.4rem 3rem;
+		letter-spacing: 0.7rem
+	}
+
+	span[title="show"] {
+		letter-spacing: 0
+	}
+
+	/* poll */
+	#poll_title {
+		margin: 0
+	}
+
+	.results {
+		margin: 0
+	}
+}

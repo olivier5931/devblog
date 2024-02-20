@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<section>
+
+  <h2>catégorie:&nbsp;{{ poll.category }}&nbsp;<span class="poll-date">{{ poll.createdAt|date("d/m/Y") }}</span></h2>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 offset-md-2 offset-sm-0 offset-xs-0">
+
+          {{ form_start(formPoll, {'id': poll.id} ) }}
+
+          <p class="form-opinions" id="poll_title">{{ poll.name }}</p>
+
+          {{ form_widget(formPoll.opinions, {'attr': {'class': 'form-opinions' }}) }}
+
+          {{ form_rest(formPoll) }}
+
+          <button type="submit" class="btn btn-primary btn-md-vote">voter</button>
+
+        </div>
+      </div>
+    </div>
+
+</section>
+
+{% endblock %}

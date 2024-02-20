@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<section>
+
+  {% if app.request.hasPreviousSession %}
+    {% for type, messages in app.session.flashbag.all() %}
+      {% for message in messages %}
+        <div class="flash-{{ type }}">
+          {{ message }}
+        </div>
+      {% endfor %}
+    {% endfor %}
+  {% endif %}
+
+  <h2>Créer / Modifier un sondage</h2>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 offset-md-2 offset-sm-0 offset-xs-0">
+
+          {{ form_start(formPoll, {'attr': {'novalidate': 'novalidate'}}) }}
+
+          {{ form_row(formPoll.name, {'attr': {'class': 'form-control' }}) }}
+
+          {{ form_row(formPoll.category, {'attr': {'class': 'form-control' }}) }}
+
+          <div class="checkbox_fields">
+            {{ form_row(formPoll.published, {'attr': {'class': 'form-control' }}) }}
+
+            {{ form_row(formPoll.closed, {'attr': {'class': 'form-control' }}) }}
+          </div>
+
+          <div id="opinions" data-prototype="
+            {{ form_widget(formPoll.opinions.vars.prototype)|e('html_attr') }}">
+
+            {% for opinion in formPoll.opinions %}
+              <p>
+                {{ form_errors(opinion) }}
+                {{ form_widget(opinion) }}
+              </p>
+            {% endfor %}
+
+          </div>
+
+          <div class="option_poll">
+            <a href="{{ path('poll') }}" class="btn btn-primary_poll">retour</a>&nbsp;&nbsp;
+            <a href="#" id="add_choice" class="btn btn-primary_poll">+ choix</a>&nbsp;&nbsp;
+            <button type="submit" class="btn btn-primary_poll">valider</button>
+          </div>
+
+          {{ form_end(formPoll) }}
+
+          {% include ('includes/poll_js.html.twig') %}
+
+        </div>
+      </div>
+    </div>
+
+</section>
+
+{% endblock %}
+

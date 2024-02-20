@@ -1,0 +1,48 @@
+security:
+    encoders:
+        App\Entity\User:
+            algorithm: auto
+
+    role_hierarchy:
+        ROLE_ADMIN:       [ROLE_GITHUB, ROLE_USER]
+        # a member with ROLE_ADMIN will also have ROLE_USER
+        # The ROLE_SUPER_ADMIN with the ROLE_ALLOWED_TO_SWITCH which allows to authenticate by
+        # pretending to be any member
+        ROLE_SUPER_ADMIN: [ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
+
+    # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
+    providers:
+        # in_memory: { memory: null }
+        app_user_provider:
+            entity:
+                class: App\Entity\User
+                property: username
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        main:
+            anonymous: lazy
+            logout:
+                path:   app_logout
+                target: homepage
+            remember_me:
+                secret:   '%kernel.secret%'
+                lifetime: 86400 # 1 day in seconds
+            guard:
+                authenticators:
+                    - App\Security\GithubAuthenticator
+
+    access_denied_url: /error
+
+      # activate different ways to authenticate
+      # https://symfony.com/doc/current/security.html#firewalls-authentication
+
+      # https://symfony.com/doc/current/security/impersonating_user.html
+    # switch_user: true
+
+    # Easy way to control access for large sections of your site
+    # Note: Only the *first* access control that matches will be used
+    access_control:
+        - { path: ^/admin, roles: ROLE_SUPER_ADMIN }
+        # - { path: ^/profile, roles: ROLE_USER }

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+  <title>{% block title %}Blog{% endblock %}</title>
+  <meta name="robots" content="index, follow">
+  <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  {% block stylesheets %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link href="{{ asset('css/style.css') }}" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="//cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" type="text/css" rel="stylesheet"/>
+  {% endblock stylesheets %}
+
+  <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
+</head>
+
+<body>
+
+{% block header %}
+
+  {% include('includes/header.html.twig') %}
+
+  {% if app.user != null and app.user.language == 'fr' %}
+    {% include('includes/navigation_fr.html.twig') %}
+  {% elseif app.user != null and app.user.language == 'eng' %}
+    {% include('includes/navigation_eng.html.twig') %}
+  {% else %} {% include('includes/navigation.html.twig') %} {% endif %}
+
+{% endblock %}
+
+{% block body %}
+
+{% endblock %}
+
+{% block footer %}
+  {% include('includes/footer.html.twig') %}
+{% endblock %}
+
+{% block javascripts %}
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <script src="//cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+
+{% endblock javascripts %}
+
+</body>
+
+</html>
+

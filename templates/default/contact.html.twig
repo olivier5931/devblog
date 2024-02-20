@@ -1,0 +1,38 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+<section>
+
+  <h2>Formulaire de contact</h2> <!-- https://mjml.io/ -->
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-3 col-sm-8 offset-md-2 offset-xs-0">   
+
+          {{ form_start(formContact, {'method': 'post', 'action': path('contact'),
+            'attr': {'class': 'contact_form'}}) }}
+          
+          {{ form_row(formContact.username, {'attr': { 'class': 'form-control' }}) }}            
+
+          {{ form_row(formContact.email, {'attr': { 'class': 'form-control' }}) }}
+          
+          {{ form_row(formContact.subject, {'attr': { 'class': 'form-control' }}) }}
+          
+          {{ form_row(formContact.body, {'attr': { 'class': 'form-control' }}) }}
+
+          <div>
+            <button type="submit" class="btn btn-primary">envoi message</button>
+          </div>
+
+          {{ form_rest(formContact) }}             
+
+          {{ form_end(formContact) }}          
+
+        </div>
+      </div>
+    </div>
+
+</section>
+
+{% endblock %}

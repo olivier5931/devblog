@@ -1,0 +1,87 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+	<section>
+
+		<h2>Section</h2>
+
+		<div class="home">
+			<div class="row">
+
+				<div class="col-md-4">
+					<div class="card"><img src="{{ asset('images/card.jpg') }}" alt="Photo by Florian Olivo"></div>
+					<a href="{{ path('homepage') }}" class="link">Articles</a>
+				</div>
+
+				<div class="col-md-4">
+					<div class="card"><img src="{{ asset('images/card.jpg') }}" alt="Photo by Florian Olivo"></div>
+					<a href="{{ path('debugging') }}" class="activ_link">Débogages</a>
+				</div>
+
+				<div class="col-md-4">
+					<div class="card"><img src="{{ asset('images/card.jpg') }}" alt="Photo by Florian Olivo"></div>
+					<a href="{{ path('contact') }}" class="link">Contact</a>
+				</div>
+
+			</div>
+		</div>
+
+	</section>
+
+	<section>
+
+		<h2>Liste des messages d'erreur</h2>
+
+		<div class="debugging">
+			<div class="row">
+
+				<div class="col-md-7">
+
+					{{ form_start(formSearch) }}
+
+					{{ form_row(formSearch.title, {'attr': {'class': 'form-control' }}) }}
+
+					<button type="submit" class="btn btn-primary_submit_search">valider</button>
+
+					{{ form_end(formSearch) }}<br /><br />
+
+					{% for debugging in debuggings %}
+
+						<div class="search-body">
+							<p>
+								<a href="{{ path('debugging_show', {'id':debugging.id}) }}" class="btn btn-primary_search"><<&nbsp;{{ debugging.title }}
+									<span title="search-date">{{ debugging.createdAt|date("d/m/Y") }}&nbsp;>></span>
+								</a>
+							</p>
+						</div>
+
+					{% endfor %}
+
+				</div>
+
+				<div class="col-md-4 offset-md-1 offset-sm-0">
+
+					<div class="categories">
+						<h2 class="categories-title">Catégories</h2>
+						<div class="categories-body">
+							<p><a href="{{ path('debugging_programming') }}">Languages Prog.</a></p>
+							<p><a href="{{ path('debugging_framework') }}">Framework</a></p>
+						</div>
+					</div>
+
+					<div class="languages">
+						<h2 class="languages-title">Langues</h2>
+						<div class="languages-body">
+							<a href="{{ path('language') }}">Français/Anglais</a>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+	</section>
+
+{% endblock %}
